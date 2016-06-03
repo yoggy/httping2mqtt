@@ -1,0 +1,31 @@
+;
+; httping2mqtt.conf - for supervisord configuration file
+;
+; install
+;     $ sudo apt-get install supervisor
+;     $ sudo cp httping2mqtt.conf.sample /etc/supervisor/conf.d/httping2mqtt.conf
+;     $ sudo vi /etc/supervisor/conf.d/httping2mqtt.conf
+;       (fix path, etc...)
+;     $ sudo supervisorctl reread
+;     $ sudo supervisorctl add httping2mqtt
+;     $ sudo supervisorctl status
+;     httping2mqtt        RUNNING    pid 8192, uptime 0:00:30
+;
+; see also
+;     Supervisor: A Process Control System
+;     http://supervisord.org/
+;
+[program:httping2mqtt]
+command                 = /home/pi/work/httping2mqtt/httping2mqtt.rb
+numprocs                = 1
+autostart               = true
+autorestart             = true
+user                    = pi
+environment             = HOME=/home/pi/
+redirect_stderr         = true
+stdout_logfile          = /home/pi/work/httping2mqtt/log.txt
+startsecs               = 7
+startretries            = 10
+stdout_logfile_maxbytes = 10MB
+stdout_logfile_backups  = 1
+

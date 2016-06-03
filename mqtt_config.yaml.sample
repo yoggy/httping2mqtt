@@ -1,0 +1,6 @@
+host:     mqtt.example.com
+port:     1883
+use_auth: true
+username: username
+password: password
+interval: 300

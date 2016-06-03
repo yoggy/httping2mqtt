@@ -1,0 +1,9 @@
+- target_url: http://www1.example.com/
+  dst_topic: topic/www1.example.com
+
+- target_url: http://www2.example.com/
+  dst_topic: topic/www2.example.com
+
+- target_url: http://www3.example.com/
+  dst_topic: topic/www3.example.com
+
