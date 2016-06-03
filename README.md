@@ -5,6 +5,7 @@ simple web site monitoring script
 How to use
 ----
 
+    $ sudo apt-get install httping
     $ mkdir ~/work
     $ cd work
     $ git clone git clone https://github.com/yoggy/httping2mqtt.git
